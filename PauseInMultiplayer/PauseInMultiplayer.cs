@@ -66,7 +66,7 @@ namespace PauseInMultiplayer
             Helper.Events.Multiplayer.PeerConnected += Multiplayer_PeerConnected;
             Helper.Events.Multiplayer.PeerDisconnected += Multiplayer_PeerDisconnected;
 
-            Helper.Events.Display.Rendered += Display_Rendered;
+            Helper.Events.Display.RenderedHud += Display_RenderedHud;
 
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
 
@@ -229,7 +229,7 @@ namespace PauseInMultiplayer
             Game1.player.temporarilyInvincible = false;
         }
 
-        private void Display_Rendered(object? sender, StardewModdingAPI.Events.RenderedEventArgs e)
+        private void Display_RenderedHud(object? sender, StardewModdingAPI.Events.RenderedHudEventArgs e)
         {
             if (!Context.IsWorldReady) return;
 
